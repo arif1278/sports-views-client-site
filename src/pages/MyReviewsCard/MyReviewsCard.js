@@ -8,7 +8,7 @@ const MyReviewCard = ({ myReview, setDeletedCount }) => {
     const handleDelete = () => {
         const deleted = window.confirm("Are want to delete this review?");
         if (deleted) {
-            fetch(`http://localhost:5000/myreview/${_id}`, {
+            fetch(`https://sports-views-server-site.vercel.app/myreview/${_id}`, {
                 method: "DELETE",
                 headers: {
                     authorization: `Bearer ${localStorage.getItem("token")}`,
