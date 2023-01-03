@@ -39,6 +39,8 @@ const AuthProvider = ({ children }) => {
         return signInWithPopup(auth, githubProvider);
     };
 
+    // create user in firebase authentications
+
     const createUser = (email, password) => {
         setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
