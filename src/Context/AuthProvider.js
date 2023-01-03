@@ -25,6 +25,8 @@ const AuthProvider = ({ children }) => {
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
 
+    // google login
+
     const googleLogin = () => {
         setLoading(true);
         return signInWithPopup(auth, googleProvider);
