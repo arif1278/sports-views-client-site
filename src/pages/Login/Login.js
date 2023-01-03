@@ -54,7 +54,7 @@ const Login = () => {
                 }
                 console.log(currentUser);
 
-                fetch('http://localhost:5000/jwt', {
+                fetch('https://sports-views-server-site.vercel.app/jwt', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

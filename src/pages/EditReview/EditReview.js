@@ -12,7 +12,7 @@ const EditReview = () => {
             review: event.target.textReview.value,
         };
 
-        fetch(`http://localhost:5000/myreview/${_id}`, {
+        fetch(`https://sports-views-server-site.vercel.app/myreview/${_id}`, {
             method: "put",
             headers: {
                 "content-type": "application/json",
