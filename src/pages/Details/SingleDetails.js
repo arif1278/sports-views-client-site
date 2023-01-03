@@ -27,7 +27,7 @@ const SingleDetails = () => {
         };
 
 
-        fetch("http://localhost:5000/review", {
+        fetch("https://sports-views-server-site.vercel.app/review", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -44,7 +44,7 @@ const SingleDetails = () => {
     };
 
     useEffect(() => {
-        fetch(`http://localhost:5000/review/${_id}`)
+        fetch(`https://sports-views-server-site.vercel.app/review/${_id}`)
             .then((res) => res.json())
             .then((data) => setReviews(data));
     }, [insertedId, _id]);

@@ -21,7 +21,7 @@ const AddService = () => {
             description: serviceDescription,
         };
 
-        fetch("http://localhost:5000/services", {
+        fetch("https://sports-views-server-site.vercel.app/services", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
