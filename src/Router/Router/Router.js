@@ -35,13 +35,13 @@ const router = createBrowserRouter([
             {
                 path: 'service',
                 element: <ServiceDetails></ServiceDetails>,
-                loader: () => fetch('http://localhost:5000/serviceall')
+                loader: () => fetch('https://sports-views-server-site.vercel.app/serviceall')
 
             },
             {
                 path: 'singlepage/:id',
                 element: <SingleDetails></SingleDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({ params }) => fetch(`https://sports-views-server-site.vercel.app/services/${params.id}`)
             },
             {
                 path: "/myreviews",
@@ -60,7 +60,7 @@ const router = createBrowserRouter([
                 ),
                 loader: async ({ params }) =>
                     fetch(
-                        `http://localhost:5000/myreview/${params.id}`
+                        `https://sports-views-server-site.vercel.app/myreview/${params.id}`
                     ),
             },
             {
@@ -74,7 +74,7 @@ const router = createBrowserRouter([
             {
                 path: '/blog',
                 element: <Blog></Blog>,
-                loader: () => fetch('http://localhost:5000/questions'),
+                loader: () => fetch('https://sports-views-server-site.vercel.app/questions'),
             }
         ]
     }

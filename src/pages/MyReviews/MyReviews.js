@@ -9,7 +9,7 @@ const MyReviews = () => {
     const [myReviews, setMyReviews] = useState([]);
     const [deletedCount, setDeletedCount] = useState(0);
     useEffect(() => {
-        fetch(`http://localhost:5000/myreviews/${user?.uid}`, {
+        fetch(`https://sports-views-server-site.vercel.app/myreviews/${user?.uid}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem("token")}`,
             },
