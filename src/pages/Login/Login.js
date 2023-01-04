@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import Swal from "sweetalert2";
 import { AuthContext } from "../../Context/AuthProvider";
 import useTitle from "../../hooks/useTitle";
 
@@ -65,6 +66,7 @@ const Login = () => {
                     .then(data => {
                         console.log(data);
                         localStorage.setItem('sportstoken', data.token);
+                        Swal.fire("Congratulations!", "Login Successfully.", "success");
                         navigate(from, { replace: true });
                     })
 
