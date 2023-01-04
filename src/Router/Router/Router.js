@@ -3,6 +3,7 @@ import AddService from "../../pages/AddService/AddService";
 import Blog from "../../pages/Blog/Blog";
 import SingleDetails from "../../pages/Details/SingleDetails";
 import EditReview from "../../pages/EditReview/EditReview";
+import ErrorPage from "../../pages/ErrorPage/ErrorPage";
 import Login from "../../pages/Login/Login";
 import MyReviews from "../../pages/MyReviews/MyReviews";
 import Register from "../../pages/Register/Register";
@@ -75,6 +76,10 @@ const router = createBrowserRouter([
                 path: '/blog',
                 element: <Blog></Blog>,
                 loader: () => fetch('https://sports-views-server-site.vercel.app/questions'),
+            },
+            {
+                path: '/*',
+                element: <ErrorPage></ErrorPage>
             }
         ]
     }
