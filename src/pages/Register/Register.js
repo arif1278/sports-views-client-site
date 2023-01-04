@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import Swal from "sweetalert2";
 import { AuthContext } from "../../Context/AuthProvider";
 import useTitle from "../../hooks/useTitle";
 
@@ -50,9 +51,11 @@ const Register = () => {
                 const user = result.user;
                 handleUpdateUserProfile(name, photoURL);
                 console.log(user);
+                Swal.fire("Congratulations!", "Sign In Successfully!", "success");
+                form.reset();
             })
             .catch((error) => setError(error.message));
-        form.reset();
+
     };
     const handleUpdateUserProfile = (name, photoURL) => {
         const profile = {
