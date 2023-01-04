@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { useLoaderData, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 import { AuthContext } from "../../Context/AuthProvider";
 const EditReview = () => {
     const { user } = useContext(AuthContext);
@@ -23,6 +24,7 @@ const EditReview = () => {
             .then((res) => res.json())
             .then((data) => {
                 if (data.modifiedCount > 0) {
+                    Swal.fire("Review Updated Successfully!", "", "success");
                     navigate("/myreviews");
                 }
             });
