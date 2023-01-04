@@ -6,7 +6,7 @@ const Footer = () => {
         <footer className="footer p-10 bg-neutral text-neutral-content">
             <div className='flex'>
                 <Link to='/'><img className="w-24 h-24 rounded-2xl" src='http://cdn.shopify.com/s/files/1/1876/7853/products/MY904B_1024x1024.jpg?v=1662787132' alt=''></img></Link>
-                <p><span className='text-5xl text-orange-400 font-bold'>SportsView</span><br />CopyRight@ 2022</p>
+                <p><span className='text-5xl text-orange-400 font-bold'>SportsView</span><br />CopyRight@ 2022 <br />Arif Hossain <br /> Narayangong,Shibo Market. </p>
             </div>
             <div>
                 <span className="footer-title">Social</span>
