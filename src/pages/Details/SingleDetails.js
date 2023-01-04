@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import Swal from 'sweetalert2';
 import { AuthContext } from '../../Context/AuthProvider';
 import useTitle from '../../hooks/useTitle';
 import ReviewCard from '../ReviewCard/ReviewCard';
@@ -38,6 +39,7 @@ const SingleDetails = () => {
             .then((res) => res.json())
             .then((data) => {
                 setInsertedId(data?.insertedId);
+                Swal.fire("Review added successfully!", "", "success");
                 form.reset();
             })
             .catch((err) => console.error(err));

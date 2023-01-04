@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const MyReviewCard = ({ myReview, setDeletedCount }) => {
     const { _id, userName, reviewMessage, userImg, date } =
@@ -18,6 +19,7 @@ const MyReviewCard = ({ myReview, setDeletedCount }) => {
                 .then((data) => {
                     if (data.deletedCount > 0) {
                         setDeletedCount(data.deletedCount);
+                        Swal.fire("Review deleted successfully!", "", "success");
                     }
                 });
         }
