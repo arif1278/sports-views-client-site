@@ -26,4 +26,29 @@ React Photo View
 * To preview photos
 
 Pages
--bullet Home
+* Home
+* Services
+* Blogs
+* Login
+* Register
+* Service Details
+* My Reviews
+* Add Service
+
+The Service Details page is dynamic which changes based on selected service
+
+Features
+* Navbar can be used to navigate the website
+* Navbar has conditional rendering based on user login and logout
+* Homepage contains a latest service list, Pricing package list, and Dentist bio
+* Services page contains service list that can be selected
+* Selecting a service takes user to the selected Service Details page
+* Service Details page shows the name, image, price, rating and description of the service
+* Service Details page has a reviews section at the bottom that displays all the reviews of the service
+* Users can add reviews here, if they are logged in they will see a review form else they will see login button
+* Blogs page shows the list of blogs with image, title, author name, description
+* My Reviews page and Add service has private routing, users can only access these pages after login
+* Login page has email-password and google login options
+* Register page has email-password and google registration options
+* Login, registration, google-login have jwt implemented with them
+* Footer has the links of site pages and social media icons
